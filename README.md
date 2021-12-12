@@ -1,4 +1,14 @@
-# Face Recognition
+# Face Recognition  上手快速、简单易用的人脸识别库。该库使用 dlib 顶尖的深度学习人脸识别技术构建，在户外脸部检测数据库基准（Labeled Faces in the Wild benchmark）上的准确率高达 99.38%。同时提供了一个简单的面部识别命令行工具，允许您对来自命令行的图像文件夹进行面部识别。完整的开发文档和应用案例，并且兼容树莓派系统（对配置要求低），对于初学者来说可以通过这个项目感受人脸识别或机器学习带来的乐趣。示例代码：
+
+# 定位图片中的所有人脸：
+import face_recognition
+image = face_recognition.load_image_file("your_file.jpg")
+face_locations = face_recognition.face_locations(image)
+
+# 识别人脸关键点，包括眼睛、鼻子、嘴和下巴
+import face_recognition
+image = face_recognition.load_image_file("your_file.jpg")
+face_landmarks_list = face_recognition.face_landmarks(image)
 
 _You can also read a translated version of this file [in Chinese 简体中文版](https://github.com/ageitgey/face_recognition/blob/master/README_Simplified_Chinese.md) or [in Korean 한국어](https://github.com/ageitgey/face_recognition/blob/master/README_Korean.md) or [in Japanese 日本語](https://github.com/m-i-k-i/face_recognition/blob/master/README_Japanese.md)._
 
